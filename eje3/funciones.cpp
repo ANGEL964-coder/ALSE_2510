@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-
+//GRUPO: JULIANA TUTA Y ANGEL PEDREROS
 
 double funeval2( const double &x ){
   // El puntero que permite llegar a esta función tiene la forma
@@ -12,6 +12,10 @@ double funeval( const double &x ){
   // El puntero que permite llegar a esta función tiene la forma
   // de double (*p)(const double&)
   return sin(M_PI*5*x/100);
+}
+
+double funeval3( const double &x){
+	return cos(M_PI*x/25);
 }
 
 void cruces_cero( double (*f)(const double &), const double &xl, const double &xu ){
@@ -27,8 +31,12 @@ void cruces_cero( double (*f)(const double &), const double &xl, const double &x
 }
 
 int main(){
+  printf("Primera función:\n");
   cruces_cero(funeval, 0, 100); // En este caso se llama la función Sin(M_PI*x/20)
+  printf("Segunda función:\n");
   cruces_cero(funeval2, 0, 100);// En este otro a sin(x/10)+cos(3*x/100)
+  printf("Tercera función:\n");
+  cruces_cero(funeval3, 20, 80);
   return 0;
 }
 
