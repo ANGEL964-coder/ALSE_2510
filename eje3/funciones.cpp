@@ -21,7 +21,7 @@ double funeval3( const double &x){
 void cruces_cero( double (*f)(const double &), const double &xl, const double &xu ){
   // El primer parámetro de esta función es un puntero a una función de la forma
   // double (*p)(const double&)
-  double anterior = 0., actual;  
+  double anterior = f(xl), actual;  
   for(int i = xl; i<xu; i++){
     actual = f( (double)i );
     if((anterior >= 0 && actual < 0 ) || (anterior < 0 && actual >= 0))
