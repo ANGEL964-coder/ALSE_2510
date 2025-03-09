@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/polinomios.dir/polinomios.cpp.o -o polinomios 
